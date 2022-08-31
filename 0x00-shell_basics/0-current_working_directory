@@ -1,4 +1,3 @@
 #!/bin/bash
 mypath=$(realpath "${BASH_SOURCE:-$0}")
 echo 'CWD path name is' $mypath
-
