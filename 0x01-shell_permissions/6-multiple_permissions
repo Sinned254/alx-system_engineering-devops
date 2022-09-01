@@ -1,2 +1,2 @@
 #!/bin/bash
-ghmod u+x,g+x,o+r hello
+chmode 554 hello
