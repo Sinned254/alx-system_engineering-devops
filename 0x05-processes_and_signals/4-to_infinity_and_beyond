@@ -2,7 +2,7 @@
 # Use a while loop to display the phrase indefinitely
 while true
 do
-    echo "To infinity and beyond indefinitely"
+    echo "To infinity and beyond"
     
     # Add a 2-second delay
     sleep 2

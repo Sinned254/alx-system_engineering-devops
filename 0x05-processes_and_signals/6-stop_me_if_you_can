@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # Check if the process is running and kill it
-
-
 # Use pkill to find and terminate the process by name
 pkill -f to_infinity_and_beyond
 

@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 # Check if the process is running and kill i
-
 # Use pgrep to find the PID of the process by its name
 pid_to_kill=$(pgrep -f to_infinity_and_beyond)
 
-# Check if a PID was found
-if [ -n "$pid_to_kill" ]; then
-    # If a PID was found, use kill to terminate the process
-    kill "$pid_to_kill"
-    echo "Process with name '$process_name' and PID $pid_to_kill has been terminated."
-else
-    echo "No process with name '$process_name' found."
-fi
+kill "$pid_to_kill"
