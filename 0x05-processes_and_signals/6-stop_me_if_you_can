@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Check if the process is running and kill it
+
+
+# Use pkill to find and terminate the process by name
+pkill -f to_infinity_and_beyond
+
+# Check if the process was terminated
+if [ $? -eq 0 ]; then
+    echo "Process '$process_name' has been terminated."
+else
+    echo "No process with name '$process_name' found."
+fi

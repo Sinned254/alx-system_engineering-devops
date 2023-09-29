@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Use a while loop to display the phrase indefinitely
+while true
+do
+    echo "To infinity and beyond indefinitely"
+    
+    # Add a 2-second delay
+    sleep 2
+done
