@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Check if the script is run with superuser privileges
+if [ "$(id -u)" -ne 0 ]; then
+    echo "Please run this script as root or with sudo."
+    exit 1
+fi
+
+# Define the correct entries for localhost and facebook.com
+localhost_entry="127.0.0.2 localhost"
+facebook_entry="8.8.8.8 facebook.com"
+
+# Check if /etc/hosts exists and is a regular file
+if [ ! -f /etc/hosts ]; then
+    echo "The /etc/hosts file does not exist."
+    exit 1
+fi
+
+# Check if /etc/hosts contains the correct entries; if not, replace them
+if ! grep -Fxq "$localhost_entry" /etc/hosts; then
+    # Remove existing entries for localhost
+    sed -i '/^127.0.0.1.*localhost$/d' /etc/hosts
+    sed -i '/^::1.*localhost ip6-localhost ip6-loopback$/d' /etc/hosts
+    
+    # Add the correct localhost entry
+    echo "$localhost_entry" >> /etc/hosts
+fi
+
+if ! grep -Fxq "$facebook_entry" /etc/hosts; then
+    # Remove existing entries for facebook.com
+    sed -i '/^8.8.8.8.*facebook.com$/d' /etc/hosts
+    
+    # Add the correct facebook.com entry
+    echo "$facebook_entry" >> /etc/hosts
+fi
+
+# Display the updated /etc/hosts file
+cat /etc/hosts
+
+echo "Custom DNS configuration completed."

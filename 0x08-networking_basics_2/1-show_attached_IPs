@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Use the 'ip' command to get active IPv4 IPs including localhost
+ipv4_ips=$(ifconfig | grep -oP 'inet \K[0-9.]+')
+
+# Display the list of active IPv4 IP
+echo "$ipv4_ips"
