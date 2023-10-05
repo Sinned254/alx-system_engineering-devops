@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Define the port number
+port=98
+
+# Listen on port 98 and send a welcome message to incoming connections
+while true; do
+    (echo -ne "Connected to port $port\n"; cat) | nc -l -p $port
+done
