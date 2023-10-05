@@ -2,5 +2,5 @@
 if ARGV.empty?
   puts "Please provide an argument."
 else
-  puts ARGV[0].scan(/^hbn|hbtn$/)
+  puts ARGV[0].scan(/^htn|hbtn$/)
 end
