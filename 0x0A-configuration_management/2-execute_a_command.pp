@@ -1,9 +1,7 @@
-# This Puppet manifest kills a process named killmenow using the exec resource and pkill
-class killmenow {
+# This Puppet manifest kills a process named 
+# killmenow using the exec resource and pkill
   exec { 'killmenow':
-    command => 'pkill killmenow',
+    command => 'pkill -f killmenow',
+    provide => 'shell'
     path    => ['/usr/bin'],
   }
-}
-
-include killmenow
