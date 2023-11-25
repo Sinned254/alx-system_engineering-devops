@@ -3,5 +3,5 @@
   exec { 'kill_process':
     command => 'pkill -f killmenow',
     provide => 'shell'
-    path    => ['/usr/bin'],
+    path    => ['/usr/bin', '/usr/sbin'],
   }
