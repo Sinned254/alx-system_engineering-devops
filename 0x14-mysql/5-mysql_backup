@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Set the name of the MySQL dump file
+DUMP_FILE="backup.sql"
+
+# Set the MySQL user and password
+MYSQL_USER="root"
+MYSQL_PASSWORD="$1"
+
+# Dump all MySQL databases to a file
+mysqldump -u $MYSQL_USER -p"$MYSQL_PASSWORD" --all-databases > $DUMP_FILE
+tar -czf "$(date +'%d-%m-%Y').tar.gz" $DUMP_FILE
