@@ -22,7 +22,9 @@ def get_employee_todo_progress(employee_id):
     # Creating JSON data structure
     json_data = {
         str(employee_id): [
-            {"task": task["title"], "completed": task["completed"], "username": username}
+            {"task": task["title"],
+             "completed": task["completed"],
+             "username": username}
             for task in todos_data
         ]
     }

@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-"""Script to gather data from API sing this REST API, for a given employee ID"""
+"""Script to gather data from API using the REST API, for a given employee ID
+returns information about his/her TODO list"""
 import requests
 import sys
 
 
 def get_employee_todo_progress(employee_id):
+    """Gets username
+       Args:
+           employee_id (str): user id number
+       Returns: employee id
+    """
     base_url = "https://jsonplaceholder.typicode.com"
     employee_url = f"{base_url}/users/{employee_id}"
     todos_url = f"{base_url}/todos?userId={employee_id}"
