@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script to gather data from API using the REST API, for a given employee ID
+""" Script to gather data from API using the REST API, for a given employee ID
 returns information about his/her TODO list"""
 import requests
 import sys
