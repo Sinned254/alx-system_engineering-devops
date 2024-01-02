@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import requests
+"""Use rest api to export data to json format"""
 import json
+import requests
 import sys
 
 

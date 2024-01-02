@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import requests
+"""Export data to csv format"""
 import csv
+import requests
 import sys
 
 

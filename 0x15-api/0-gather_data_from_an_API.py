@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script to gather data from API"""
+"""Script to gather data from API sing this REST API, for a given employee ID"""
 import requests
 import sys
 

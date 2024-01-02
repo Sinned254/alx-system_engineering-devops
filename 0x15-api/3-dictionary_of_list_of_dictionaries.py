@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """script to gather all todo data from an API and write to JSON file"""
-import requests
 import json
+import requests
 
 
 def export_todo_all_employees():
