@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Fetches Employee data from an API and displays on the page.
-"""
+""" Fetches Employee data from an API and displays on the page."""
 import requests
 import sys
 
@@ -15,7 +14,7 @@ def get_employee_todo_progress(employee_id):
     employee_data = employee_response.json()
     employee_name = employee_data["name"]
 
-    # Fetching employee's TODO list
+    # Fetching employee'sTODO list
     todos_response = requests.get(todos_url)
     todos_data = todos_response.json()
 
@@ -23,7 +22,7 @@ def get_employee_todo_progress(employee_id):
     total_tasks = len(todos_data)
     completed_tasks = sum(task["completed"] for task in todos_data)
 
-    # Displaying employee TODO list progress
+    # Displaying employeeTODO list progress
     print(f"Employee {employee_name} is done with tasks
           ({completed_tasks}/{total_tasks}): ")
 
