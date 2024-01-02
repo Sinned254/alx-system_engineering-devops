@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Script to gather data from API using the REST API, for a given employee ID
-returns information about his/her TODO list"""
+""" Fetches Employee data from an API and displays on the page.
+"""
 import requests
 import sys
 
