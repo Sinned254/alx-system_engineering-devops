@@ -6,11 +6,6 @@ import sys
 
 
 def get_employee_todo_progress(employee_id):
-    """Gets username
-       Args:
-           employee_id (str): user id number
-       Returns: employee id
-    """
     base_url = "https://jsonplaceholder.typicode.com"
     employee_url = f"{base_url}/users/{employee_id}"
     todos_url = f"{base_url}/todos?userId={employee_id}"
