@@ -8,7 +8,7 @@ def top_ten(subreddit):
        Args:
            subreddit (str): name of subreddit
     """
-    url = f"https://api.reddit.com/r/"
+    url = "https://api.reddit.com/r/"
     headers = {'User-Agent': 'my-app/0.0.1'}
     response = requests.get(url, headers=headers, allow_redirects=False)
     if response.status_code == 200:
