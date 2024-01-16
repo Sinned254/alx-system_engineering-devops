@@ -1,12 +1,17 @@
 #!/usr/bin/python3
+"""Function that prints top ten hot posts for a given subreddit"""
 import requests
 
 
 def recurse(subreddit, hot_list=[], after=None):
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=100"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0;"
-               "Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
-               "Chrome/58.0.3029.110 Safari/537.3"}
+    """Gets hot posts in subreddit
+       Args:
+           subreddit (str): name of subreddit
+           hot_list (list): list of titles
+           after (str): id of next set of results
+    """
+    url = 'https://api.reddit.com/r/'
+    headers = {'User-Agent': 'my-app/0.0.1'}
     params = {"after": after} if after else {}
     response = requests.get(url, headers=headers,
                             params=params, allow_redirects=False)
